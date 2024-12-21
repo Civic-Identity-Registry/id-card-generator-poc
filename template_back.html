@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Identity Registry - ID Card Back</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 8vw;
+            font-weight: bold;
+            color: rgba(59, 130, 246, 0.05);
+            white-space: nowrap;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content {
+            padding: 5vh 5vw;
+            z-index: 1;
+            position: relative;
+        }
+
+        .notice {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 3vh 3vw;
+            border-radius: 1vh;
+            margin-bottom: 4vh;
+        }
+
+        .notice h2 {
+            font-size: 2.2vw;
+            font-weight: 600;
+            margin-bottom: 2vh;
+        }
+
+        .notice p {
+            font-size: 1.6vw;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .info-section {
+            margin-bottom: 4vh;
+        }
+
+        .info-section h3 {
+            font-size: 1.8vw;
+            font-weight: 600;
+            color: #1d4ed8;
+            margin-bottom: 2vh;
+        }
+
+        .info-section p {
+            font-size: 1.4vw;
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 1vh;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, rgba(59, 130, 246, 0.9), rgba(29, 78, 216, 0.9));
+            color: white;
+            padding: 1.5vh;
+            text-align: center;
+            font-size: 1.8vw;
+            backdrop-filter: blur(5px);
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .footer a:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="watermark">CIVIC IDENTITY REGISTRY</div>
+        <div class="content">
+            <div class="notice">
+                <h2>Important Notice</h2>
+                <p>This ID card is property of the Civic Identity Registry. If found, please contact support@civicidentity.org.</p>
+            </div>
+
+            <div class="info-section">
+                <h3>Card Usage</h3>
+                <p>• This card serves as an official identification document on all websites and platforms that support CIR identification</p>
+                <p>• The embedded QR codes contain cryptographic verification data</p>
+                <p>• Do not share your private key QR code with anyone</p>
+            </div>
+
+            <div class="info-section">
+                <h3>Digital Verification</h3>
+                <p>• Scan the public QR code to verify this ID card's authenticity online</p>
+                <p>• The private QR code is for personal digital signatures and secure logins</p>
+                <p>• Your CIR ID is recognized by our partner platforms for seamless digital identity verification</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="https://civicidentity.org">www.civicidentity.org</a>
+        </div>
+    </div>
+</body>
+</html>
